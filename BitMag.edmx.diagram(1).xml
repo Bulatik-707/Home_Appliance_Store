@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a4a6075a12042ea831e46c9dfe375c6" Name="Diagram1">
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Должность" Width="1.5" PointX="6.125" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_КатегорияТовара" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Клиенты" Width="1.5" PointX="0.625" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Пользователи" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Поставки" Width="1.5" PointX="8.125" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Поставщик" Width="1.5" PointX="5.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Продажи" Width="1.5" PointX="2.875" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Производитель" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Сотрудники" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Товар" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_ПоставкиТовара" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTehnikaModel.Т_Продажи_Товара" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Сотрудники_Т_Должность" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Товар_Т_КатегорияТовара" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Продажи_Т_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Поставки_Т_Поставщик" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_ПоставкиТовара_Т_Поставки" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Продажи_Т_Сотрудники" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Продажи_Товара_Т_Продажи" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Товар_Т_Производитель" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_ПоставкиТовара_Т_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTehnikaModel.FK_Т_Продажи_Товара_Т_Товар" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

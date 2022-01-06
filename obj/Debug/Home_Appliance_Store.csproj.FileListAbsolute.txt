@@ -1,0 +1,63 @@
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\DB_Technika.mdb
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\EntityFramework.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\EntityFramework.SqlServer.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\EntityFramework.xml
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\EntityFramework.SqlServer.xml
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\ru\EntityFramework.resources.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.csproj.GenerateResource.cache
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.csproj.CoreCompileInputs.cache
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.csproj.CopyComplete
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.Properties.Resources.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\Home_Appliance_Store.exe.config
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\Home_Appliance_Store.exe
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\bin\Debug\Home_Appliance_Store.pdb
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Add_Postavki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Add_Prodaja.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_add_Tov.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_A_Prod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Avtor.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_A_Men.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Klient.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Postavki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Postavshiki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Post_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Prod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Prod_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Proizvod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Sotr.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.F_A_Yprav.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.exe
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Курсач (Entity)\Курсач\obj\Debug\Home_Appliance_Store.pdb
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\DB_Technika.mdb
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\Home_Appliance_Store.exe.config
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\Home_Appliance_Store.exe
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\Home_Appliance_Store.pdb
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\EntityFramework.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\EntityFramework.SqlServer.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\EntityFramework.xml
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\EntityFramework.SqlServer.xml
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\bin\Debug\ru\EntityFramework.resources.dll
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.csproj.AssemblyReference.cache
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Add_Postavki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Add_Prodaja.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_add_Tov.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_A_Prod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Avtor.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_A_Men.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Klient.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Postavki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Postavshiki.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Post_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Prod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Prod_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Proizvod.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Sotr.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_Tovar.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.F_A_Yprav.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.Properties.Resources.resources
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.csproj.GenerateResource.cache
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.csproj.CoreCompileInputs.cache
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.csproj.CopyComplete
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.exe
+W:\Новая папка\ИС_1-406_ЮУрГТК_2017-21\3_Курс_19-20_ИС-306\Курсач\Home_Appliance_Store\Home_Appliance_Store\obj\Debug\Home_Appliance_Store.pdb

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BitMagModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Т_Должность">
+    <Key>
+      <PropertyRef Name="Код_Должности" />
+    </Key>
+    <Property Name="Код_Должности" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Должность" Type="nvarchar" MaxLength="33" />
+  </EntityType>
+  <EntityType Name="Т_КатегорияТовара">
+    <Key>
+      <PropertyRef Name="Код_Кат" />
+    </Key>
+    <Property Name="Код_Кат" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Кат_Товара" Type="nvarchar" MaxLength="33" />
+  </EntityType>
+  <EntityType Name="Т_Клиенты">
+    <Key>
+      <PropertyRef Name="Код_клиента" />
+    </Key>
+    <Property Name="Код_клиента" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ФИО_клиента" Type="nvarchar" MaxLength="73" />
+    <Property Name="Телефон" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Т_Пользователи">
+    <Key>
+      <PropertyRef Name="Код_П" />
+    </Key>
+    <Property Name="Код_П" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Пользователь" Type="nvarchar" MaxLength="73" />
+    <Property Name="Пароль" Type="int" />
+  </EntityType>
+  <EntityType Name="Т_Поставки">
+    <Key>
+      <PropertyRef Name="Код_Поставки_ПТ" />
+    </Key>
+    <Property Name="Код_Поставки_ПТ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Код_Поставщика_ПТ" Type="int" />
+    <Property Name="ДатаПоставки" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Т_ПоставкиТовара">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="КодПоставки" Type="int" Nullable="false" />
+    <Property Name="КодКат_Товара" Type="int" />
+    <Property Name="КодТовара" Type="int" />
+    <Property Name="Кол_во" Type="int" />
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Т_Поставщик">
+    <Key>
+      <PropertyRef Name="Код_Поставщика" />
+    </Key>
+    <Property Name="Код_Поставщика" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Поставщик" Type="nvarchar" MaxLength="72" />
+    <Property Name="Адрес" Type="nvarchar" MaxLength="73" />
+    <Property Name="Телефон" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Т_Продажи">
+    <Key>
+      <PropertyRef Name="Код_Продажи_П" />
+    </Key>
+    <Property Name="Код_Продажи_П" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Дата_Продажи_П" Type="datetime" />
+    <Property Name="Код_Продовца_П" Type="int" />
+    <Property Name="Код_Клиента_П" Type="int" />
+  </EntityType>
+  <EntityType Name="Т_Продажи_Товара">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код_Продажи" Type="int" Nullable="false" />
+    <Property Name="Код_Катег" Type="int" />
+    <Property Name="Код_Товара" Type="int" />
+    <Property Name="Кол_во" Type="int" />
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Т_Производитель">
+    <Key>
+      <PropertyRef Name="Код_Производителя" />
+    </Key>
+    <Property Name="Код_Производителя" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Производитель" Type="nvarchar" MaxLength="72" />
+    <Property Name="Наценка" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Т_Сотрудники">
+    <Key>
+      <PropertyRef Name="Код_Сотрудника" />
+    </Key>
+    <Property Name="Код_Сотрудника" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ФИО" Type="nvarchar" MaxLength="73" />
+    <Property Name="Код_Должности" Type="int" />
+  </EntityType>
+  <EntityType Name="Т_Товар">
+    <Key>
+      <PropertyRef Name="Код_Товара_Т" />
+    </Key>
+    <Property Name="Код_Товара_Т" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Товар_Т" Type="nvarchar" MaxLength="77" />
+    <Property Name="Код_КатТовара_Т" Type="int" />
+    <Property Name="Код_Производителя_Т" Type="int" />
+    <Property Name="Изображение_Т" Type="nvarchar" MaxLength="99" />
+    <Property Name="Цена_Закупочная_Т" Type="money" />
+    <Property Name="Цена_Реализации_Т" Type="money" />
+    <Property Name="ДатаВыпуска" Type="datetime" />
+    <Property Name="Гарантия" Type="smallint" />
+    <Property Name="Кол_во_Т" Type="int" />
+  </EntityType>
+  <Association Name="FK_Т_Поставки_Т_Поставщик">
+    <End Role="Т_Поставщик" Type="Self.Т_Поставщик" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Поставки" Type="Self.Т_Поставки" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Поставщик">
+        <PropertyRef Name="Код_Поставщика" />
+      </Principal>
+      <Dependent Role="Т_Поставки">
+        <PropertyRef Name="Код_Поставщика_ПТ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_ПоставкиТовара_Т_Поставки">
+    <End Role="Т_Поставки" Type="Self.Т_Поставки" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_ПоставкиТовара" Type="Self.Т_ПоставкиТовара" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Поставки">
+        <PropertyRef Name="Код_Поставки_ПТ" />
+      </Principal>
+      <Dependent Role="Т_ПоставкиТовара">
+        <PropertyRef Name="КодПоставки" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_ПоставкиТовара_Т_Товар">
+    <End Role="Т_Товар" Type="Self.Т_Товар" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_ПоставкиТовара" Type="Self.Т_ПоставкиТовара" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Товар">
+        <PropertyRef Name="Код_Товара_Т" />
+      </Principal>
+      <Dependent Role="Т_ПоставкиТовара">
+        <PropertyRef Name="КодТовара" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Продажи_Т_Клиенты">
+    <End Role="Т_Клиенты" Type="Self.Т_Клиенты" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Продажи" Type="Self.Т_Продажи" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Клиенты">
+        <PropertyRef Name="Код_клиента" />
+      </Principal>
+      <Dependent Role="Т_Продажи">
+        <PropertyRef Name="Код_Клиента_П" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Продажи_Т_Сотрудники">
+    <End Role="Т_Сотрудники" Type="Self.Т_Сотрудники" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Продажи" Type="Self.Т_Продажи" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Сотрудники">
+        <PropertyRef Name="Код_Сотрудника" />
+      </Principal>
+      <Dependent Role="Т_Продажи">
+        <PropertyRef Name="Код_Продовца_П" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Продажи_Товара_Т_Продажи">
+    <End Role="Т_Продажи" Type="Self.Т_Продажи" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Продажи_Товара" Type="Self.Т_Продажи_Товара" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Продажи">
+        <PropertyRef Name="Код_Продажи_П" />
+      </Principal>
+      <Dependent Role="Т_Продажи_Товара">
+        <PropertyRef Name="Код_Продажи" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Продажи_Товара_Т_Товар">
+    <End Role="Т_Товар" Type="Self.Т_Товар" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Продажи_Товара" Type="Self.Т_Продажи_Товара" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Товар">
+        <PropertyRef Name="Код_Товара_Т" />
+      </Principal>
+      <Dependent Role="Т_Продажи_Товара">
+        <PropertyRef Name="Код_Товара" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Сотрудники_Т_Должность">
+    <End Role="Т_Должность" Type="Self.Т_Должность" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Сотрудники" Type="Self.Т_Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Должность">
+        <PropertyRef Name="Код_Должности" />
+      </Principal>
+      <Dependent Role="Т_Сотрудники">
+        <PropertyRef Name="Код_Должности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Товар_Т_КатегорияТовара">
+    <End Role="Т_КатегорияТовара" Type="Self.Т_КатегорияТовара" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Товар" Type="Self.Т_Товар" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_КатегорияТовара">
+        <PropertyRef Name="Код_Кат" />
+      </Principal>
+      <Dependent Role="Т_Товар">
+        <PropertyRef Name="Код_КатТовара_Т" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Т_Товар_Т_Производитель">
+    <End Role="Т_Производитель" Type="Self.Т_Производитель" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Т_Товар" Type="Self.Т_Товар" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Т_Производитель">
+        <PropertyRef Name="Код_Производителя" />
+      </Principal>
+      <Dependent Role="Т_Товар">
+        <PropertyRef Name="Код_Производителя_Т" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Хранилище BitMagModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Должность" EntityType="Self.Т_Должность" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_КатегорияТовара" EntityType="Self.Т_КатегорияТовара" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Клиенты" EntityType="Self.Т_Клиенты" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Пользователи" EntityType="Self.Т_Пользователи" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Поставки" EntityType="Self.Т_Поставки" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_ПоставкиТовара" EntityType="Self.Т_ПоставкиТовара" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Поставщик" EntityType="Self.Т_Поставщик" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Продажи" EntityType="Self.Т_Продажи" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Продажи_Товара" EntityType="Self.Т_Продажи_Товара" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Производитель" EntityType="Self.Т_Производитель" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Сотрудники" EntityType="Self.Т_Сотрудники" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Т_Товар" EntityType="Self.Т_Товар" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Т_Поставки_Т_Поставщик" Association="Self.FK_Т_Поставки_Т_Поставщик">
+      <End Role="Т_Поставщик" EntitySet="Т_Поставщик" />
+      <End Role="Т_Поставки" EntitySet="Т_Поставки" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_ПоставкиТовара_Т_Поставки" Association="Self.FK_Т_ПоставкиТовара_Т_Поставки">
+      <End Role="Т_Поставки" EntitySet="Т_Поставки" />
+      <End Role="Т_ПоставкиТовара" EntitySet="Т_ПоставкиТовара" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_ПоставкиТовара_Т_Товар" Association="Self.FK_Т_ПоставкиТовара_Т_Товар">
+      <End Role="Т_Товар" EntitySet="Т_Товар" />
+      <End Role="Т_ПоставкиТовара" EntitySet="Т_ПоставкиТовара" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Продажи_Т_Клиенты" Association="Self.FK_Т_Продажи_Т_Клиенты">
+      <End Role="Т_Клиенты" EntitySet="Т_Клиенты" />
+      <End Role="Т_Продажи" EntitySet="Т_Продажи" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Продажи_Т_Сотрудники" Association="Self.FK_Т_Продажи_Т_Сотрудники">
+      <End Role="Т_Сотрудники" EntitySet="Т_Сотрудники" />
+      <End Role="Т_Продажи" EntitySet="Т_Продажи" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Продажи_Товара_Т_Продажи" Association="Self.FK_Т_Продажи_Товара_Т_Продажи">
+      <End Role="Т_Продажи" EntitySet="Т_Продажи" />
+      <End Role="Т_Продажи_Товара" EntitySet="Т_Продажи_Товара" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Продажи_Товара_Т_Товар" Association="Self.FK_Т_Продажи_Товара_Т_Товар">
+      <End Role="Т_Товар" EntitySet="Т_Товар" />
+      <End Role="Т_Продажи_Товара" EntitySet="Т_Продажи_Товара" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Сотрудники_Т_Должность" Association="Self.FK_Т_Сотрудники_Т_Должность">
+      <End Role="Т_Должность" EntitySet="Т_Должность" />
+      <End Role="Т_Сотрудники" EntitySet="Т_Сотрудники" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Товар_Т_КатегорияТовара" Association="Self.FK_Т_Товар_Т_КатегорияТовара">
+      <End Role="Т_КатегорияТовара" EntitySet="Т_КатегорияТовара" />
+      <End Role="Т_Товар" EntitySet="Т_Товар" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Т_Товар_Т_Производитель" Association="Self.FK_Т_Товар_Т_Производитель">
+      <End Role="Т_Производитель" EntitySet="Т_Производитель" />
+      <End Role="Т_Товар" EntitySet="Т_Товар" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

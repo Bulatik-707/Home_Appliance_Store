@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BitMagModelContainer" CdmEntityContainer="Entities2">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BitMagModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Должность">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Должность">
+        <MappingFragment StoreEntitySet="Т_Должность">
+          <ScalarProperty Name="Код_Должности" ColumnName="Код_Должности" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_КатегорияТовара">
+      <EntityTypeMapping TypeName="BitMagModel.Т_КатегорияТовара">
+        <MappingFragment StoreEntitySet="Т_КатегорияТовара">
+          <ScalarProperty Name="Код_Кат" ColumnName="Код_Кат" />
+          <ScalarProperty Name="Кат_Товара" ColumnName="Кат_Товара" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Клиенты">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Клиенты">
+        <MappingFragment StoreEntitySet="Т_Клиенты">
+          <ScalarProperty Name="Код_клиента" ColumnName="Код_клиента" />
+          <ScalarProperty Name="ФИО_клиента" ColumnName="ФИО_клиента" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Пользователи">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Пользователи">
+        <MappingFragment StoreEntitySet="Т_Пользователи">
+          <ScalarProperty Name="Код_П" ColumnName="Код_П" />
+          <ScalarProperty Name="Пользователь" ColumnName="Пользователь" />
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Поставки">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Поставки">
+        <MappingFragment StoreEntitySet="Т_Поставки">
+          <ScalarProperty Name="Код_Поставки_ПТ" ColumnName="Код_Поставки_ПТ" />
+          <ScalarProperty Name="Код_Поставщика_ПТ" ColumnName="Код_Поставщика_ПТ" />
+          <ScalarProperty Name="ДатаПоставки" ColumnName="ДатаПоставки" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Поставщик">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Поставщик">
+        <MappingFragment StoreEntitySet="Т_Поставщик">
+          <ScalarProperty Name="Код_Поставщика" ColumnName="Код_Поставщика" />
+          <ScalarProperty Name="Поставщик" ColumnName="Поставщик" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Продажи">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Продажи">
+        <MappingFragment StoreEntitySet="Т_Продажи">
+          <ScalarProperty Name="Код_Продажи_П" ColumnName="Код_Продажи_П" />
+          <ScalarProperty Name="Дата_Продажи_П" ColumnName="Дата_Продажи_П" />
+          <ScalarProperty Name="Код_Продовца_П" ColumnName="Код_Продовца_П" />
+          <ScalarProperty Name="Код_Клиента_П" ColumnName="Код_Клиента_П" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Производитель">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Производитель">
+        <MappingFragment StoreEntitySet="Т_Производитель">
+          <ScalarProperty Name="Код_Производителя" ColumnName="Код_Производителя" />
+          <ScalarProperty Name="Производитель" ColumnName="Производитель" />
+          <ScalarProperty Name="Наценка" ColumnName="Наценка" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Сотрудники">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Сотрудники">
+        <MappingFragment StoreEntitySet="Т_Сотрудники">
+          <ScalarProperty Name="Код_Сотрудника" ColumnName="Код_Сотрудника" />
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="Код_Должности" ColumnName="Код_Должности" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Товар">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Товар">
+        <MappingFragment StoreEntitySet="Т_Товар">
+          <ScalarProperty Name="Код_Товара_Т" ColumnName="Код_Товара_Т" />
+          <ScalarProperty Name="Товар_Т" ColumnName="Товар_Т" />
+          <ScalarProperty Name="Код_КатТовара_Т" ColumnName="Код_КатТовара_Т" />
+          <ScalarProperty Name="Код_Производителя_Т" ColumnName="Код_Производителя_Т" />
+          <ScalarProperty Name="Изображение_Т" ColumnName="Изображение_Т" />
+          <ScalarProperty Name="Цена_Закупочная_Т" ColumnName="Цена_Закупочная_Т" />
+          <ScalarProperty Name="Цена_Реализации_Т" ColumnName="Цена_Реализации_Т" />
+          <ScalarProperty Name="ДатаВыпуска" ColumnName="ДатаВыпуска" />
+          <ScalarProperty Name="Гарантия" ColumnName="Гарантия" />
+          <ScalarProperty Name="Кол_во_Т" ColumnName="Кол_во_Т" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_ПоставкиТовара">
+      <EntityTypeMapping TypeName="BitMagModel.Т_ПоставкиТовара">
+        <MappingFragment StoreEntitySet="Т_ПоставкиТовара">
+          <ScalarProperty Name="КодПоставки" ColumnName="КодПоставки" />
+          <ScalarProperty Name="КодКат_Товара" ColumnName="КодКат_Товара" />
+          <ScalarProperty Name="КодТовара" ColumnName="КодТовара" />
+          <ScalarProperty Name="Кол_во" ColumnName="Кол_во" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Т_Продажи_Товара">
+      <EntityTypeMapping TypeName="BitMagModel.Т_Продажи_Товара">
+        <MappingFragment StoreEntitySet="Т_Продажи_Товара">
+          <ScalarProperty Name="Код_Продажи" ColumnName="Код_Продажи" />
+          <ScalarProperty Name="Код_Катег" ColumnName="Код_Катег" />
+          <ScalarProperty Name="Код_Товара" ColumnName="Код_Товара" />
+          <ScalarProperty Name="Кол_во" ColumnName="Кол_во" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище BitMagModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище BitMagModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище BitMagModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище BitMagModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BitMagModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище BitMagModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BitMagModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище BitMagModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище BitMagModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
