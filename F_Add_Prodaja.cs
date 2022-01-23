@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -22,10 +16,10 @@ namespace Home_Appliance_Store
 
         private void F_Add_Prodaja_Load(object sender, EventArgs e)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                bs_Sotr.DataSource = context.Т_Сотрудники.ToList();
-                bs_Kl.DataSource = context.Т_Клиенты.ToList();
+                bs_Sotr.DataSource = context.Сотрудники.ToList();
+                bs_Kl.DataSource = context.Клиенты.ToList();
             }
 
             Tuning.ComboBinding(bs_Sotr, "ФИО", "Код_Сотрудника", cB_Pr);
@@ -34,14 +28,14 @@ namespace Home_Appliance_Store
         }
         private void B_Add_Click(object sender, EventArgs e)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                Т_Продажи prodaja = new Т_Продажи();
+                Продажи prodaja = new Продажи();
                 prodaja.Код_Клиента_П = (int)cB_Kl.SelectedValue;
                 prodaja.Код_Продовца_П = (int)cB_Pr.SelectedValue;
                 prodaja.Дата_Продажи_П = DateTime.Today;
 
-                context.Т_Продажи.Add(prodaja);
+                context.Продажи.Add(prodaja);
                 context.SaveChanges();
             
                 F_Prod_Tovar f = new F_Prod_Tovar(prodaja);

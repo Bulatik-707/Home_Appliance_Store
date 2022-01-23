@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.cB_Dolznost = new System.Windows.Forms.ComboBox();
             this.B_Save = new System.Windows.Forms.Button();
             this.dataGV_Sotr = new System.Windows.Forms.DataGridView();
@@ -38,13 +37,8 @@
             this.B_Add = new System.Windows.Forms.Button();
             this.status = new System.Windows.Forms.StatusStrip();
             this.StatusRes = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dB_TechnikaDataSet = new Home_Appliance_Store.DB_TechnikaDataSet();
-            this.тСотрудникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.т_СотрудникиTableAdapter = new Home_Appliance_Store.DB_TechnikaDataSetTableAdapters.Т_СотрудникиTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_Sotr)).BeginInit();
             this.status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_TechnikaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тСотрудникиBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cB_Dolznost
@@ -131,20 +125,6 @@
             this.StatusRes.Name = "StatusRes";
             this.StatusRes.Size = new System.Drawing.Size(0, 17);
             // 
-            // dB_TechnikaDataSet
-            // 
-            this.dB_TechnikaDataSet.DataSetName = "DB_TechnikaDataSet";
-            this.dB_TechnikaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // тСотрудникиBindingSource
-            // 
-            this.тСотрудникиBindingSource.DataMember = "Т_Сотрудники";
-            this.тСотрудникиBindingSource.DataSource = this.dB_TechnikaDataSet;
-            // 
-            // т_СотрудникиTableAdapter
-            // 
-            this.т_СотрудникиTableAdapter.ClearBeforeFill = true;
-            // 
             // F_Sotr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,8 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_Sotr)).EndInit();
             this.status.ResumeLayout(false);
             this.status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_TechnikaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тСотрудникиBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,8 +164,6 @@
         private System.Windows.Forms.Button B_Add;
         private System.Windows.Forms.StatusStrip status;
         private System.Windows.Forms.ToolStripStatusLabel StatusRes;
-        private DB_TechnikaDataSet dB_TechnikaDataSet;
-        private System.Windows.Forms.BindingSource тСотрудникиBindingSource;
-        private DB_TechnikaDataSetTableAdapters.Т_СотрудникиTableAdapter т_СотрудникиTableAdapter;
+
     }
 }

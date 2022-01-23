@@ -47,18 +47,18 @@ namespace Home_Appliance_Store
 
         private void dataGV_Tovar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
                 int id = (int)dataGV_Tovar.CurrentRow.Cells["Код"].Value;
                 // Найти нужную запись
                 // Найти тек. V-т
-                Т_Товар t = context.Т_Товар.FirstOrDefault(z => z.Код_Товара_Т == id);
+                Товар t = context.Товар.FirstOrDefault(z => z.Код_Товара_Т == id);
                 // У всех Z  у которых  z.НСтуд == id
                 //    //if НАЖАТА КНОПКА Удалить
                 if (dataGV_Tovar.Columns[e.ColumnIndex].Name == "Dell_Baton")
                 {
                     //Удалить выбраную запись
-                    context.Т_Товар.Remove(t);
+                    context.Товар.Remove(t);
                     //Сохр. изменения
                     context.SaveChanges();
                     //Перезагрузка табл.

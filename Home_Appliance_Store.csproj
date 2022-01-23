@@ -72,11 +72,6 @@
   <ItemGroup>
     <Compile Include="DB.cs" />
     <Compile Include="DB_Help.cs" />
-    <Compile Include="DB_TechnikaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_TechnikaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="F_Add_Postavki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,70 +168,61 @@
     <Compile Include="F_A_Yprav.Designer.cs">
       <DependentUpon>F_A_Yprav.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model2.Context.cs">
+    <Compile Include="ModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.Context.tt</DependentUpon>
+      <DependentUpon>ModelDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model2.cs">
+    <Compile Include="ModelDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model2.Designer.cs">
+    <Compile Include="ModelDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.edmx</DependentUpon>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Param.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tuning.cs" />
-    <Compile Include="Т_Должность.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Должность.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_КатегорияТовара.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="КатегорияТовара.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Клиенты.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Клиенты.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Пользователи.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Пользователи.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Поставки.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Поставки.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_ПоставкиТовара.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="ПоставкиТовара.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Поставщик.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Поставщик.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Продажи.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Продажи.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Продажи_Товара.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Продажи_Товара.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Производитель.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Производитель.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Сотрудники.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Сотрудники.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Т_Товар.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Товар.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="F_Add_Postavki.resx">
       <DependentUpon>F_Add_Postavki.cs</DependentUpon>
@@ -296,23 +282,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model2.edmx">
+    <EntityDeploy Include="ModelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB_TechnikaDataSet.xsc">
-      <DependentUpon>DB_TechnikaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DB_TechnikaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_TechnikaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_TechnikaDataSet.xss">
-      <DependentUpon>DB_TechnikaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Model2.edmx.diagram">
-      <DependentUpon>Model2.edmx</DependentUpon>
+    <None Include="ModelDB.edmx.diagram">
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -335,18 +310,15 @@
     <None Include="Resources\002.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB_Technika.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Model2.Context.tt">
+    <Content Include="ModelDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model2.tt">
+    <Content Include="ModelDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.cs</LastGenOutput>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69fa6519d17d4f798e128bac4bac438a" Name="Diagram1">
+        <EntityTypeShape EntityType="BitMagModel.Должность" Width="1.5" PointX="1.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.КатегорияТовара" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Клиенты" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Пользователи" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Поставки" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Поставщик" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Продажи" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Производитель" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Сотрудники" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Товар" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.ПоставкиТовара" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BitMagModel.Продажи_Товара" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BitMagModel.FK_Сотрудники_Должность" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Товар_КатегорияТовара" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Продажи_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Поставки_Поставщик" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_ПоставкиТовара_Поставки" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Продажи_Сотрудники" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Продажи_Товара_Продажи" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Товар_Производитель" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_ПоставкиТовара_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="BitMagModel.FK_Продажи_Товара_Товар" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

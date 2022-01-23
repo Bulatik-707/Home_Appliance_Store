@@ -12,8 +12,8 @@ namespace Home_Appliance_Store
             InitializeComponent();
         }
 
-        Т_Поставки new_postavka;
-        public F_Post_Tovar(Т_Поставки postavka)
+        Поставки new_postavka;
+        public F_Post_Tovar(Поставки postavka)
         {
             InitializeComponent();
             this.new_postavka = postavka;
@@ -29,18 +29,18 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadPost(BindingSource bs_PostTov)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var str = from s in context.Т_ПоставкиТовара
+                var str = from s in context.ПоставкиТовара
                           where s.КодПоставки == new_postavka.Код_Поставки_ПТ
                           select new
                           {
-                              Код = s.Код,
-                              Катег = s.Т_Товар.Т_КатегорияТовара.Кат_Товара,
-                              Товар = s.Т_Товар.Товар_Т,
+                              Код = s.КодПоставки,
+                              Катег = s.Товар.КатегорияТовара.Кат_Товара,
+                              Товар = s.Товар.Товар_Т,
                               Колво = s.Кол_во,
-                              Цена = s.Т_Товар.Цена_Реализации_Т,
-                              Сумма = s.Т_Товар.Цена_Реализации_Т * s.Кол_во
+                              Цена = s.Товар.Цена_Реализации_Т,
+                              Сумма = s.Товар.Цена_Реализации_Т * s.Кол_во
 
                           };
                 bs_PostTov.DataSource = str.ToList();
@@ -52,9 +52,9 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadTovar(BindingSource bs_Tov, int kodKat)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var Tov = from t in context.Т_Товар
+                var Tov = from t in context.Товар
                           where t.Код_КатТовара_Т == kodKat
                           select new
                           {
@@ -71,13 +71,13 @@ namespace Home_Appliance_Store
 
             Tuning.DobBatonSetka("Dell_Button", "Удалить", "Удалить", dataGV_ProdTov);
 
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                bs_Kat.DataSource = context.Т_КатегорияТовара.ToList();
-                bs_Tov.DataSource = context.Т_Товар.ToList();
+                bs_Kat.DataSource = context.КатегорияТовара.ToList();
+                bs_Tov.DataSource = context.Товар.ToList();
 
 
-                label_Postavshik.Text = (context.Т_Поставщик.FirstOrDefault(z => z.Код_Поставщика == new_postavka.Код_Поставщика_ПТ)).Поставщик;
+                label_Postavshik.Text = context.Поставщик.FirstOrDefault( z => z.Код_Поставщика == new_postavka.Код_Поставщика_ПТ ).Поставщик1;
                 Date_Pst.Value = (DateTime)new_postavka.ДатаПоставки;
             }
 
@@ -91,14 +91,14 @@ namespace Home_Appliance_Store
         private void dataGV_ProdTov_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGV_ProdTov.CurrentRow.Cells["Код"].Value;
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                Т_ПоставкиТовара s = context.Т_ПоставкиТовара.FirstOrDefault(z => z.Код == id);
+                ПоставкиТовара s = context.ПоставкиТовара.FirstOrDefault( z => z.КодПоставки == id );
 
-                if (dataGV_ProdTov.Columns[e.ColumnIndex].Name == "Dell_Button")
+                if ( dataGV_ProdTov.Columns[e.ColumnIndex].Name == "Dell_Button" )
                 {
                     //Удалить выбраную запись
-                    context.Т_ПоставкиТовара.Remove(s);
+                    context.ПоставкиТовара.Remove(s);
                     context.SaveChanges();
                     LoadPost(bs_PostTov);
                     res = "Запись удалена!";
@@ -126,9 +126,9 @@ namespace Home_Appliance_Store
         {
             if (f2)
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
-                    var q = context.Т_Товар.FirstOrDefault(z => z.Код_Товара_Т == (int)cB_Tov.SelectedValue);
+                    var q = context.Товар.FirstOrDefault(z => z.Код_Товара_Т == (int)cB_Tov.SelectedValue);
                     label_Cost.DataBindings.Clear();
                     label_Cost.DataBindings.Add("Text", q, "Цена_Реализации_Т", true);
 
@@ -147,14 +147,14 @@ namespace Home_Appliance_Store
         {
             try
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
-                    Т_ПоставкиТовара newPT = new Т_ПоставкиТовара();
+                    ПоставкиТовара newPT = new ПоставкиТовара();
                     newPT.КодПоставки = new_postavka.Код_Поставки_ПТ;
                     newPT.КодКат_Товара = (int)cB_Kat.SelectedValue;
                     newPT.КодТовара = (int)cB_Tov.SelectedValue;
                     newPT.Кол_во = (int)num_Kol.Value;
-                    context.Т_ПоставкиТовара.Add(newPT);
+                    context.ПоставкиТовара.Add(newPT);
                     res = "Запись добавлена!";
                     context.SaveChanges(); // Сохр.
                 }

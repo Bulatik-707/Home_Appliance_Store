@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -23,13 +19,13 @@ namespace Home_Appliance_Store
         void LoadPostavshik(BindingSource bs_Postavshiki)
         {
             ////  *** Метод для вывода \ загр. инфы  *** !!!
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities())
             {
-                var pst = from p in context.Т_Поставщик
+                var pst = from p in context.Поставщик
                           select new
                           {// Что выводить
                               Код = p.Код_Поставщика,
-                              Поставщик = p.Поставщик,
+                              Поставщик = p.Поставщик1,
                               Адрес = p.Адрес,
                               Телефон = p.Телефон
                           };
@@ -85,15 +81,15 @@ namespace Home_Appliance_Store
             //if добавляем запись
             try
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
                     if (flag)
                     {
-                        Т_Поставщик newPost = new Т_Поставщик();
-                        newPost.Поставщик = tB_Post.Text;
+                        Поставщик newPost = new Поставщик();
+                        newPost.Поставщик1 = tB_Post.Text;
                         newPost.Адрес = tB_Adres_Post.Text;
                         newPost.Телефон = maskedTB_Tell.Text;
-                        context.Т_Поставщик.Add(newPost);
+                        context.Поставщик.Add(newPost);
                         flag = false;
                         res = "Запись добавлена!";
                     }
@@ -102,10 +98,10 @@ namespace Home_Appliance_Store
                     {
                         this.Text = "Внесение изменений...";
                         int idPost = (int)dataGV_Postavshiki.CurrentRow.Cells["Код"].Value;
-                        Т_Поставщик rpst = context.Т_Поставщик.FirstOrDefault(x => x.Код_Поставщика == idPost);
+                        Поставщик rpst = context.Поставщик.FirstOrDefault(x => x.Код_Поставщика == idPost);
                         if (rpst != null)
                         {
-                            rpst.Поставщик = tB_Post.Text;
+                            rpst.Поставщик1 = tB_Post.Text;
                             rpst.Адрес = tB_Adres_Post.Text;
                             rpst.Телефон = maskedTB_Tell.Text;
                             res = "Запись сохранена!";
@@ -126,15 +122,15 @@ namespace Home_Appliance_Store
         private void dataGV_Postavshiki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGV_Postavshiki.CurrentRow.Cells["Код"].Value;
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
                 // Найти нужную запись
-                Т_Поставщик pst = context.Т_Поставщик.FirstOrDefault(z => z.Код_Поставщика == id);
+                Поставщик pst = context.Поставщик.FirstOrDefault(z => z.Код_Поставщика == id);
 
                 if (dataGV_Postavshiki.Columns[e.ColumnIndex].Name == "Dell_Button")
                 {
                     //Удалить выбраную запись
-                    context.Т_Поставщик.Remove(pst);
+                    context.Поставщик.Remove(pst);
                     context.SaveChanges();
                     LoadPostavshik(bs_Postavshiki);
                     res = "Запись удалена!";

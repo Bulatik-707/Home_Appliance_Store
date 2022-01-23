@@ -118,6 +118,7 @@
             // 
             // dataGV_Postavshiki
             // 
+            this.dataGV_Postavshiki.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGV_Postavshiki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV_Postavshiki.Location = new System.Drawing.Point(15, 114);
             this.dataGV_Postavshiki.Name = "dataGV_Postavshiki";

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -25,14 +21,14 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadSotr(BindingSource bs_Sotrydniki)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var str = from s in context.Т_Сотрудники
+                var str = from s in context.Сотрудники
                           select new
                           {// Что выводить
                               Код = s.Код_Сотрудника,
                               ФИО = s.ФИО,
-                              Должность = s.Т_Должность.Должность,
+                              Должность = s.Должность.Должность1,
                               КодДолжности = s.Код_Должности
                           };
                 bs_Sotrydniki.DataSource = str.ToList();
@@ -52,10 +48,6 @@ namespace Home_Appliance_Store
 
         private void F_Sotr_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_TechnikaDataSet.Т_Сотрудники". При необходимости она может быть перемещена или удалена.
-            this.т_СотрудникиTableAdapter.Fill( this.dB_TechnikaDataSet.Т_Сотрудники );
-            LoadSotr( bs_Sotrydniki);
-
             //Настраиваем вн. вид сетки
             Tuning.ChangeViewGrid(dataGV_Sotr, Color.LightBlue);
             // Добавить кнопку "Удалить"
@@ -63,14 +55,14 @@ namespace Home_Appliance_Store
             // Добавить кнопку "Изменить"
             Tuning.DobBatonSetka("Update_Button", "Изменить", "Изменить", dataGV_Sotr);
 
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                bs_Dolzn.DataSource = context.Т_Должность.ToList();
+                bs_Dolzn.DataSource = context.Должность.ToList();
             }
             // Привязка полей формы           
-            Tuning.TextBinding(bs_Sotrydniki, "ФИО", tB_FIO_Sotr);
+            Tuning.TextBinding( bs_Sotrydniki, "ФИО", tB_FIO_Sotr );
             //BS Откуда, Что (Поле), Что (Код), Куда (ComboBox),   Куда (BS), Имя из что выводить
-            Tuning.ComboBinding(bs_Dolzn, "Должность", "Код_Должности", cB_Dolznost, bs_Sotrydniki, "КодДолжности");
+            Tuning.ComboBinding( bs_Dolzn, "Должность", "Код_Должности", cB_Dolznost, bs_Sotrydniki, "КодДолжности" );
 
         }
 
@@ -93,14 +85,14 @@ namespace Home_Appliance_Store
             //if добавляем запись
             try
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
                     if (flag)
                     {
-                        Т_Сотрудники newSotr = new Т_Сотрудники();
+                        Сотрудники newSotr = new Сотрудники();
                         newSotr.ФИО = tB_FIO_Sotr.Text;
                         newSotr.Код_Должности = (int)cB_Dolznost.SelectedValue;
-                        context.Т_Сотрудники.Add(newSotr);
+                        context.Сотрудники.Add(newSotr);
                         flag = false;
                         res = "Запись добавлена!";
                     }
@@ -109,7 +101,7 @@ namespace Home_Appliance_Store
                     {
                         this.Text = "Внесение изменений...";
                         int idSotr = (int)dataGV_Sotr.CurrentRow.Cells["Код"].Value;
-                        Т_Сотрудники rs = context.Т_Сотрудники.FirstOrDefault(x => x.Код_Сотрудника == idSotr);
+                        Сотрудники rs = context.Сотрудники.FirstOrDefault(x => x.Код_Сотрудника == idSotr);
                         if (rs != null)
                         {
                             rs.ФИО = tB_FIO_Sotr.Text;
@@ -133,15 +125,15 @@ namespace Home_Appliance_Store
         private void dataGV_Sotr_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGV_Sotr.CurrentRow.Cells["Код"].Value;
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
                 // Найти нужную запись
-                Т_Сотрудники s = context.Т_Сотрудники.FirstOrDefault(z => z.Код_Сотрудника == id);
+                Сотрудники s = context.Сотрудники.FirstOrDefault(z => z.Код_Сотрудника == id);
 
                 if (dataGV_Sotr.Columns[e.ColumnIndex].Name == "Dell_Button")
                 {
                     //Удалить выбраную запись
-                    context.Т_Сотрудники.Remove(s);
+                    context.Сотрудники.Remove(s);
                     context.SaveChanges();
                     LoadSotr(bs_Sotrydniki);
                     res = "Запись удалена!";

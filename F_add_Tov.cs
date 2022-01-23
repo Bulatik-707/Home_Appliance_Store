@@ -13,15 +13,15 @@ namespace Home_Appliance_Store
         BindingSource bs_newTovar = new BindingSource();
         // добавить  Инфу из Т_Товары
         BindingSource bs = new BindingSource();
-        Т_Товар new_t;
+        Товар new_t;
         bool flag;
-        public F_add_Tov(Т_Товар t, BindingSource bs)
+        public F_add_Tov( Товар t, BindingSource bs )
         {
             InitializeComponent();
             // IF добавляем новую запись
             if (t is null)
             {
-                this.new_t = new Т_Товар();
+                this.new_t = new Товар();
                 this.flag = true;
             }
             // If Редактируем
@@ -34,16 +34,16 @@ namespace Home_Appliance_Store
             bs_newTovar.DataSource = this.new_t;
         }
         // Созд. глоб. - context
-        Entities3 context = new Entities3();
+        BitMagEntities context = new BitMagEntities();
         private void F_add_Tov_Load(object sender, EventArgs e)
         {
             BindingSource bsKat = new BindingSource();
             BindingSource bsPr = new BindingSource();
 
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities())
             {
-                bsKat.DataSource = context.Т_КатегорияТовара.ToList();
-                bsPr.DataSource = context.Т_Производитель.ToList();
+                bsKat.DataSource = context.КатегорияТовара.ToList();
+                bsPr.DataSource = context.Производитель.ToList();
             }
 
 
@@ -66,15 +66,15 @@ namespace Home_Appliance_Store
             //if добовляем запись
             if (flag)
             {
-                //if (context.Т_Студент.FirstOrDefault(x => x.АДРЕС == st.АДРЕС)!=null)
-                context.Т_Товар.Add(new_t);
+                //if (context.Студент.FirstOrDefault(x => x.АДРЕС == st.АДРЕС)!=null)
+                context.Товар.Add(new_t);
                 flag = false;
             }
 
             //  if Редактируем запись
             else
             {
-                Т_Товар t2 = context.Т_Товар.FirstOrDefault(x => x.Код_Товара_Т == new_t.Код_Товара_Т);
+                Товар t2 = context.Товар.FirstOrDefault(x => x.Код_Товара_Т == new_t.Код_Товара_Т);
                 //s2.НГ = (short)cB_Gr.SelectedValue;
                 t2.Товар_Т = tB_Tovar.Text;
                 t2.Код_КатТовара_Т = (int)cB_Kat.SelectedValue;

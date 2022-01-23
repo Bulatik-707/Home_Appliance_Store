@@ -35,7 +35,7 @@ namespace Home_Appliance_Store
         // куда (зап.), что (столбец), откуда брать даные.
         public static void TextBinding(BindingSource bs, string field, TextBox TB)
         {
-            TB.DataBindings.Add("Text", bs, field, true);
+            TB.DataBindings.Add( "Text", bs, field, true );
         }
 
         //  Настройка привязки ComboBox

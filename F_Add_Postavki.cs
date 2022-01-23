@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -21,9 +15,9 @@ namespace Home_Appliance_Store
 
         private void F_Add_Postavki_Load(object sender, EventArgs e)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                bs_Postavshik.DataSource = context.Т_Поставщик.ToList();
+                bs_Postavshik.DataSource = context.Поставщик.ToList();
             }
 
             Tuning.ComboBinding(bs_Postavshik, "Поставщик", "Код_Поставщика", cB_Postavshik);
@@ -31,13 +25,13 @@ namespace Home_Appliance_Store
         }
         private void B_Add_Click(object sender, EventArgs e)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                Т_Поставки postavka = new Т_Поставки();
+                Поставки postavka = new Поставки();
                 postavka.Код_Поставщика_ПТ = (int)cB_Postavshik.SelectedValue;
                 postavka.ДатаПоставки = DateTime.Today;
 
-                context.Т_Поставки.Add(postavka);
+                context.Поставки.Add(postavka);
                 context.SaveChanges();
 
                 F_Post_Tovar f = new F_Post_Tovar(postavka);

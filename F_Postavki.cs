@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -21,26 +17,26 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadPost(BindingSource bs_PostTov)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities())
             {
-                var str = from s in context.Т_ПоставкиТовара
+                var str = from s in context.ПоставкиТовара
                           select new
                           {// Что выводить
                               КодПоставки = s.КодПоставки,
-                              Дата = s.Т_Поставки.ДатаПоставки,
+                              Дата = s.Поставки.ДатаПоставки,
 
-                              Поставщик = s.Т_Поставки.Т_Поставщик.Поставщик,
-                              КодПоставщика = s.Т_Поставки.Код_Поставщика_ПТ,
+                              Поставщик = s.Поставки.Поставщик.Поставщик1,
+                              КодПоставщика = s.Поставки.Код_Поставщика_ПТ,
 
-                              Катег = s.Т_Товар.Т_КатегорияТовара.Кат_Товара,
+                              Катег = s.Товар.КатегорияТовара.Кат_Товара,
                               КодКатег = s.КодКат_Товара,
 
-                              Товар = s.Т_Товар.Товар_Т,
+                              Товар = s.Товар.Товар_Т,
                               КодТовара = s.КодТовара,
 
                               Колво = s.Кол_во,
-                              Цена = s.Т_Товар.Цена_Реализации_Т,
-                              Сумма = s.Т_Товар.Цена_Реализации_Т * s.Кол_во
+                              Цена = s.Товар.Цена_Реализации_Т,
+                              Сумма = s.Товар.Цена_Реализации_Т * s.Кол_во
                           };
                 bs_PostTov.DataSource = str.ToList();
             }

@@ -19,9 +19,9 @@ namespace Home_Appliance_Store
         void LoadPostavshik(BindingSource bs_Klienti)
         {
             ////  *** Метод для вывода \ загр. инфы  *** !!!
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var kl = from k in context.Т_Клиенты
+                var kl = from k in context.Клиенты
                           select new
                           {// Что выводить
                               Код = k.Код_клиента,
@@ -74,14 +74,14 @@ namespace Home_Appliance_Store
             //if добавляем запись
             try
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
                     if (flag)
                     {
-                        Т_Клиенты newKl = new Т_Клиенты();
+                        Клиенты newKl = new Клиенты();
                         newKl.ФИО_клиента = tB_FIO.Text;
                         newKl.Телефон = maskedTB_Tell.Text;
-                        context.Т_Клиенты.Add(newKl);
+                        context.Клиенты.Add(newKl);
                         flag = false;
                         res = "Запись добавлена!";
                     }
@@ -90,7 +90,7 @@ namespace Home_Appliance_Store
                     {
                         this.Text = "Внесение изменений...";
                         int idPost = (int)dataGV_Postavshiki.CurrentRow.Cells["Код"].Value;
-                        Т_Клиенты rkl = context.Т_Клиенты.FirstOrDefault(x => x.Код_клиента == idPost);
+                        Клиенты rkl = context.Клиенты.FirstOrDefault(x => x.Код_клиента == idPost);
                         if (rkl != null)
                         {
                             rkl.ФИО_клиента = tB_FIO.Text;
@@ -112,15 +112,15 @@ namespace Home_Appliance_Store
         private void dataGV_Postavshiki_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGV_Postavshiki.CurrentRow.Cells["Код"].Value;
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
                 // Найти нужную запись
-                Т_Клиенты klts = context.Т_Клиенты.FirstOrDefault(z => z.Код_клиента == id);
+                Клиенты klts = context.Клиенты.FirstOrDefault(z => z.Код_клиента == id);
 
                 if (dataGV_Postavshiki.Columns[e.ColumnIndex].Name == "Dell_Button")
                 {
                     //Удалить выбраную запись
-                    context.Т_Клиенты.Remove(klts);
+                    context.Клиенты.Remove(klts);
                     context.SaveChanges();
                     LoadPostavshik(bs_Klienti);
                     res = "Запись удалена!";

@@ -24,15 +24,15 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadSotr(BindingSource bs_Proizvoditeli)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var pr = from p in context.Т_Производитель
+                var pr = from p in context.Производитель
                           select new
                           {// Что выводить
                               Код = p.Код_Производителя,
-                              Производитель = p.Производитель,
+                              Производитель = p.Производитель1,
                               Наценка = p.Наценка
-                              //Должность = s.Т_Должность.Должность,
+                              //Должность = s.Должность.Должность,
                               //КодДолжности = s.Код_Должности
                           };
                 bs_Proizvoditeli.DataSource = pr.ToList();
@@ -86,14 +86,14 @@ namespace Home_Appliance_Store
             //if добавляем запись
             try
             {
-                using (Entities3 context = new Entities3())
+                using ( BitMagEntities context = new BitMagEntities() )
                 {
                     if (flag)
                     {
-                        Т_Производитель newPr = new Т_Производитель();
-                        newPr.Производитель = tB_Pr.Text;
+                        Производитель newPr = new Производитель();
+                        newPr.Производитель1 = tB_Pr.Text;
                         newPr.Наценка = (short)num_Nasenka.Value;
-                        context.Т_Производитель.Add(newPr);
+                        context.Производитель.Add(newPr);
                         flag = false;
                         res = "Запись добавлена!";
                     }
@@ -102,10 +102,10 @@ namespace Home_Appliance_Store
                     {
                         this.Text = "Внесение изменений...";
                         int idPrz = (int)dataGV_Proizvod.CurrentRow.Cells["Код"].Value;
-                        Т_Производитель rp = context.Т_Производитель.FirstOrDefault(x => x.Код_Производителя == idPrz);
+                        Производитель rp = context.Производитель.FirstOrDefault(x => x.Код_Производителя == idPrz);
                         if (rp != null)
                         {
-                            rp.Производитель = tB_Pr.Text;
+                            rp.Производитель1 = tB_Pr.Text;
                             rp.Наценка = (short)num_Nasenka.Value;
                             res = "Запись сохранена!";
                         }
@@ -126,15 +126,15 @@ namespace Home_Appliance_Store
         private void dataGV_Proizvod_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGV_Proizvod.CurrentRow.Cells["Код"].Value;
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
                 // Найти нужную запись
-                Т_Производитель p = context.Т_Производитель.FirstOrDefault(z => z.Код_Производителя == id);
+                Производитель p = context.Производитель.FirstOrDefault(z => z.Код_Производителя == id);
 
                 if (dataGV_Proizvod.Columns[e.ColumnIndex].Name == "Dell_Button")
                 {
                     //Удалить выбраную запись
-                    context.Т_Производитель.Remove(p);
+                    context.Производитель.Remove(p);
                     context.SaveChanges();
                     LoadSotr(bs_Proizvoditeli);
                     res = "Запись удалена!";

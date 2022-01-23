@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Home_Appliance_Store
@@ -22,30 +18,30 @@ namespace Home_Appliance_Store
         //Загрузка данных
         void LoadProdaja(BindingSource bs_ProdTov)
         {
-            using (Entities3 context = new Entities3())
+            using ( BitMagEntities context = new BitMagEntities() )
             {
-                var str = from s in context.Т_Продажи_Товара
+                var str = from s in context.Продажи_Товара
                           select new
                           {// Что выводить
                               
                               КодПродажи = s.Код_Продажи,
-                              Дата = s.Т_Продажи.Дата_Продажи_П,
+                              Дата = s.Продажи.Дата_Продажи_П,
 
-                              Продавец = s.Т_Продажи.Т_Сотрудники.ФИО,
-                              КодПродавца = s.Т_Продажи.Код_Продовца_П,
+                              Продавец = s.Продажи.Сотрудники.ФИО,
+                              КодПродавца = s.Продажи.Код_Продовца_П,
 
-                              Клиент = s.Т_Продажи.Т_Клиенты.ФИО_клиента,
-                              КодКлиента = s.Т_Продажи.Код_Клиента_П,
+                              Клиент = s.Продажи.Клиенты.ФИО_клиента,
+                              КодКлиента = s.Продажи.Код_Клиента_П,
 
-                              Катег = s.Т_Товар.Т_КатегорияТовара.Кат_Товара,
+                              Катег = s.Товар.КатегорияТовара.Кат_Товара,
                               КодКатег = s.Код_Катег,
 
-                              Товар = s.Т_Товар.Товар_Т,
+                              Товар = s.Товар.Товар_Т,
                               КодТовара = s.Код_Товара,
 
                               Колво = s.Кол_во,
-                              Цена = s.Т_Товар.Цена_Реализации_Т,
-                              Сумма = s.Т_Товар.Цена_Реализации_Т * s.Кол_во
+                              Цена = s.Товар.Цена_Реализации_Т,
+                              Сумма = s.Товар.Цена_Реализации_Т * s.Кол_во
 
                           };
                 bs_ProdTov.DataSource = str.ToList();
